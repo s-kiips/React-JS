@@ -23,7 +23,7 @@ class App extends React.Component {
                 {/*<p>sudin Ranjitkar</p>*/}
                     <div className="col-xs-10 col-xs-offset-1">
                         <Home name={"max"} age={27} user={user}/>
-                        {/*<Home/>*/}
+                        <p>This is paragraph to be called from another component</p>
                     </div>
                 {/*<div className="col-xs-10 col-xs-offset-1">
                     <p>Counting the number of likes</p>
