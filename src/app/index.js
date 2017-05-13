@@ -11,6 +11,10 @@ import AwesomeComponent from  "./components/AwesomeComponent";
 
 class App extends React.Component {
     render(){
+        var user={
+            name:"Anna",
+            hobbies:["Sports","Dance","Singing"]
+        };
         return (
             <div className="container">
                 <div className="col-xs-10 col-xs-offset-1">
@@ -18,12 +22,13 @@ class App extends React.Component {
                 </div>
                 {/*<p>sudin Ranjitkar</p>*/}
                     <div className="col-xs-10 col-xs-offset-1">
-                        <Home/>
+                        <Home name={"max"} age={27} user={user}/>
+                        {/*<Home/>*/}
                     </div>
-                <div className="col-xs-10 col-xs-offset-1">
+                {/*<div className="col-xs-10 col-xs-offset-1">
                     <p>Counting the number of likes</p>
                     <AwesomeComponent/>
-                </div>
+                </div>*/}
             </div>
         );
     }
