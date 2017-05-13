@@ -4,35 +4,39 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-export class  Home extends React.Component{
-    render(){
+export class Home extends React.Component {
+    constructor(props) {
+        super();
+        this.state = {
+            age: props.initialAge,
+            status:0
+        };
+    }
+
+    onMakeOlder() {
+        this.setState({
+            age: this.state.age + 3
+        });
+    }
+
+    render() {
         console.log(this.props);
-        var text="test from home component";
+        var text = "test from home component";
         return (
 
             <div>
                 <p>New Component!</p>
                 <p>{text}</p>
-                <p>My name is {this.props.name}, My age is {this.props.age}</p>
-                <p>User Object => Name:{this.props.user.name}</p>
-                <div>
-                    <h4>Hobbies</h4>
-                        <ul>
-                            {this.props.user.hobbies.map((hobby, i) => <li key={i}>{hobby}</li>)}
-                        </ul>
-                    <hr/>
-                    {this.props.children}
-
-                </div>
-                {/*{ within this curly braces we can run javascript codes }*/}
+                <p>My name is {this.props.name}, My age is {this.state.age}</p>
+                <p>Status: {this.state.status}</p>
+                <hr/>
+                <button onClick={() => this.onMakeOlder()} className="btn btn-primary">Make Me Older!</button>
             </div>
         );
     }
 }
 
-Home.propTypes={
-    name:PropTypes.string,
-    age:PropTypes.number,
-    user:PropTypes.object,
-    children:PropTypes.element
+Home.propTypes = {
+    name: PropTypes.string,
+    initialAge: PropTypes.number,
 };

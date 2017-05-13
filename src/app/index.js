@@ -11,10 +11,6 @@ import AwesomeComponent from  "./components/AwesomeComponent";
 
 class App extends React.Component {
     render(){
-        var user={
-            name:"Anna",
-            hobbies:["Sports","Dance","Singing"]
-        };
         return (
             <div className="container">
                 <div className="col-xs-10 col-xs-offset-1">
@@ -22,8 +18,7 @@ class App extends React.Component {
                 </div>
                 {/*<p>sudin Ranjitkar</p>*/}
                     <div className="col-xs-10 col-xs-offset-1">
-                        <Home name={"max"} age={27} user={user}/>
-                        <p>This is paragraph to be called from another component</p>
+                        <Home name={"max"} initialAge={27}/>
                     </div>
                 {/*<div className="col-xs-10 col-xs-offset-1">
                     <p>Counting the number of likes</p>
