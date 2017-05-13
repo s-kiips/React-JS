@@ -14,7 +14,7 @@ class App extends React.Component {
         return (
             <div className="container">
                 <div className="col-xs-10 col-xs-offset-1">
-                    <Header/>
+                    <Header homeLink="Home"/>
                 </div>
                 {/*<p>sudin Ranjitkar</p>*/}
                     <div className="col-xs-10 col-xs-offset-1">
@@ -28,4 +28,6 @@ class App extends React.Component {
         );
     }
 }
+/*window.document.getElementById("name of class")
+* is used to render the contents of app class in the browser*/
 render(<App/>,window.document.getElementById("app"));

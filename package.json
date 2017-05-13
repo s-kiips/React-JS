@@ -15,6 +15,7 @@
   "author": "Sudin Ranjitkar",
   "license": "MIT",
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
